@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>this is index</title>
+    <title>欢迎来入住网易猪场</title>
 </head>
 <body>
     <h1>this is index</h1>
