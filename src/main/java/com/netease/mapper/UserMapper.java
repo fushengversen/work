@@ -2,9 +2,8 @@ package com.netease.mapper;
 
 import com.netease.pojo.User;
 import com.netease.pojo.UserExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int countByExample(UserExample example);

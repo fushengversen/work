@@ -11,7 +11,7 @@
 <div class="n-head">
     <div class="g-doc f-cb">
         <div class="user">
-            买家你好，<span class="name">mmmmm</span>！<a href="">[退出]</a>
+            买家你好，<span><%=session.getAttribute("user") %></span>！<a href="">[退出]</a>
             请<a href="/login">[登录]</a>
         </div>
         <ul class="nav">

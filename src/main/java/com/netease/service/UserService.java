@@ -1,10 +1,10 @@
 package com.netease.service;
 
-import com.netease.responseUtil.Response;
+import com.netease.pojo.User;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Repository;
 
+@Repository(value="UserMapper")
 public interface UserService {
-    Response userLogin(String username, String password, HttpServletRequest request, HttpServletResponse response);
+    User userLogin(String username, String password);
 }

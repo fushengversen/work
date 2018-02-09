@@ -1,4 +1,5 @@
 package com.netease.pojo;
+
 public class User {
     private Integer id;
 

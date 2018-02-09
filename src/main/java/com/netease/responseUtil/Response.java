@@ -1,31 +1,28 @@
 package com.netease.responseUtil;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Response {
-    private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    private Integer statusCode;
+    private Integer code;
 
     private String message;
 
-    private Object data;
+    private Boolean result;
 
-    public Response(Integer statusCode, String message, Object data) {
-        this.statusCode = statusCode;
+    public Response(Integer code, String message, Boolean result) {
+        this.code = code;
         this.message = message;
-        this.data = data;
+        this.result = result;
     }
 
-    public Integer getStatusCode() {
-        return statusCode;
+    public Integer getCode() {
+        return code;
     }
 
-    public void setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public String getMessage() {
@@ -36,67 +33,19 @@ public class Response {
         this.message = message;
     }
 
-    public Object getData() {
-        return data;
+    public Boolean getResult() {
+        return result;
     }
 
-    public void setData(Object data) {
-        this.data = data;
+    public void setResult(Boolean result) {
+        this.result = result;
     }
 
-    public static Response build(Integer statusCode, String message, Object data){
-        return new Response(statusCode, message, data);
-    }
-
-    public Response(Object data){
-        this.statusCode = 200;
-        this.message = "OK";
-        this.data = data;
-    }
-
-    public static Response json2Pojo(String jsonData, Class<?> clazz){
-        try {
-            if (clazz == null) {
-                return MAPPER.readValue(jsonData, Response.class);
-            }
-            JsonNode jsonNode = MAPPER.readTree(jsonData);
-            JsonNode data = jsonNode.get("data");
-            Object obj = null;
-            if (clazz != null) {
-                if (data.isObject()) {
-                    obj = MAPPER.readValue(data.traverse(), clazz);
-                } else if (data.isTextual()) {
-                    obj = MAPPER.readValue(data.asText(), clazz);
-                }
-            }
-            return build(jsonNode.get("statusCode").intValue(), jsonNode.get("message").asText(), obj);
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    public static Response format(String json){
-        try {
-            return MAPPER.readValue(json, Response.class);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    public static Response json2List(String jsonData, Class<?> clazz) {
-        try {
-            JsonNode jsonNode = MAPPER.readTree(jsonData);
-            JsonNode data = jsonNode.get("data");
-            Object obj = null;
-            if (data.isArray() && data.size() > 0) {
-                obj = MAPPER.readValue(data.traverse(),
-                        MAPPER.getTypeFactory().constructCollectionType(List.class, clazz));
-            }
-            return build(jsonNode.get("statusCode").intValue(), jsonNode.get("message").asText(), obj);
-        } catch (Exception e) {
-            return null;
-        }
+    public static Map<String, Object> build(Integer code, String message, Boolean result){
+        Map<String, Object> response = new HashMap<>();
+        response.put("code", code);
+        response.put("message", message);
+        response.put("result", result);
+        return response;
     }
 }

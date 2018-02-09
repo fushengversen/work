@@ -5,6 +5,7 @@
       <element id="javaee-facet-resources" facet="work/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="work/web/Web" />
           <element id="module-output" name="work" />
         </element>
         <element id="directory" name="lib">
@@ -30,6 +31,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.3" />
+          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
         </element>
       </element>
     </root>
