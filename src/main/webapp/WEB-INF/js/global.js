@@ -54,6 +54,7 @@
             }
         }
         if (options.type === "POST") {
+        	console.log(options.url);
             xhr.open("POST", options.url, true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send(util.serialize(options.data));

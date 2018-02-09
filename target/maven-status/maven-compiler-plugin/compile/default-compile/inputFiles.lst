@@ -1,7 +1,11 @@
 /Users/versen/work/src/main/java/com/netease/pojo/UserExample.java
 /Users/versen/work/src/main/java/com/netease/service/impl/UserServiceImpl.java
+/Users/versen/work/src/main/java/com/netease/controller/Index.java
 /Users/versen/work/src/main/java/com/netease/pojo/User.java
+/Users/versen/work/src/main/java/com/netease/controller/LoginController.java
+/Users/versen/work/src/main/java/com/netease/mapper/UserDao.java
 /Users/versen/work/src/main/java/com/netease/responseUtil/Response.java
 /Users/versen/work/src/main/java/com/netease/mapper/UserMapper.java
 /Users/versen/work/src/main/java/com/netease/pojo/UserWithBLOBs.java
+/Users/versen/work/src/main/java/com/netease/GeneratorSqlmap.java
 /Users/versen/work/src/main/java/com/netease/service/UserService.java

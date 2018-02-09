@@ -3,8 +3,12 @@ com/netease/pojo/UserExample$GeneratedCriteria.class
 com/netease/mapper/UserMapper.class
 com/netease/pojo/UserExample$Criterion.class
 com/netease/pojo/UserExample.class
+com/netease/mapper/UserDao.class
 com/netease/pojo/UserExample$Criteria.class
 com/netease/pojo/UserWithBLOBs.class
+com/netease/controller/LoginController.class
 com/netease/pojo/User.class
+com/netease/GeneratorSqlmap.class
 com/netease/service/impl/UserServiceImpl.class
+com/netease/controller/Index.class
 com/netease/service/UserService.class

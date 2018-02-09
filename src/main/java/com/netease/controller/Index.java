@@ -11,8 +11,8 @@ public class Index {
         return "index";
     }
 
-    @RequestMapping("/{page}")
-    public String login(@PathVariable String page){
-        return page;
-    }
+//    @RequestMapping("/{page}")
+//    public String login(@PathVariable String page){
+//        return page;
+//    }
 }

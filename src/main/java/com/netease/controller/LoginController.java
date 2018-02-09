@@ -5,7 +5,6 @@ import com.netease.responseUtil.Response;
 import com.netease.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -17,12 +16,17 @@ public class LoginController {
     @Resource
     public UserService userService;
 
-    @RequestMapping(value = "/api/login", method = RequestMethod.POST)
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
+    @RequestMapping(value = "/api/login")
     public Map login(String userName, String password, HttpSession session){
-        Map<String, Object> response = new HashMap<>();
+        System.out.println("enter login controller");
         User user = userService.userLogin(userName, password);
         if (null == user)   return Response.build(300, "用户名或者密码错误", false);
         session.setAttribute("user", user.getUsername());
         return Response.build(200, "登陆成功", true);
+
     }
 }
