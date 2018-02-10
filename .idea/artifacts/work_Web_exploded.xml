@@ -32,6 +32,9 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.3" />
           <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.0.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.27-incubating" />
         </element>
       </element>
     </root>

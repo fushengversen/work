@@ -80,18 +80,24 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api.version}</version>
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -110,6 +116,15 @@
             <artifactId>javax.annotation-api</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.3</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>
@@ -136,17 +151,17 @@
 
 
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<includes>-->
+                    <!--<include>**/*.properties</include>-->
+                    <!--<include>**/*.xml</include>-->
+                <!--</includes>-->
+                <!--<filtering>true</filtering>-->
+            <!--</resource>-->
 
-        </resources>
+        <!--</resources>-->
 
     </build>
 </project>
