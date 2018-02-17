@@ -1,4 +1,4 @@
-package com.netease.responseUtil;
+package com.netease.util;
 
 import java.util.HashMap;
 import java.util.Map;

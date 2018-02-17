@@ -12,6 +12,7 @@
     <div class="g-doc f-cb">
         <div class="user">
             买家你好，<span><%=session.getAttribute("user") %></span>！<a href="">[退出]</a>
+            <%String user = (String) session.getAttribute("user");%>
             请<a href="/login">[登录]</a>
         </div>
         <ul class="nav">
