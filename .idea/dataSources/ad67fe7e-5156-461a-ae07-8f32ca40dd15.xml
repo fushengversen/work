@@ -915,102 +915,129 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="231" parent="8" name="item">
+    <table id="231" parent="8" name="deal">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="232" parent="8" name="user">
+    <table id="232" parent="8" name="item">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="233" parent="231" name="id">
+    <table id="233" parent="8" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="234" parent="231" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="231" name="name">
+    <column id="235" parent="231" name="item_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="236" parent="231" name="user_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="231" name="price">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="231" name="time">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="239" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="240" parent="232" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="232" name="title">
       <Position>2</Position>
       <DataType>varchar(11)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="231" name="status">
+    <column id="242" parent="232" name="price">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="231" name="seller_id">
+    <column id="243" parent="232" name="image_url">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="231" name="buyer_id">
+    <column id="244" parent="232" name="description">
       <Position>5</Position>
-      <DataType>int(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="238" parent="231" name="image_url">
-      <Position>6</Position>
       <DataType>varchar(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="231" name="desc">
-      <Position>7</Position>
-      <DataType>varchar(11)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="240" parent="231" name="itemname">
-      <ColNames>name</ColNames>
+    <index id="245" parent="232" name="itemname">
+      <ColNames>title</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="241" parent="231" name="PRIMARY">
+    <key id="246" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="242" parent="231" name="itemname">
-      <ColNames>name</ColNames>
+    <key id="247" parent="232" name="itemname">
+      <ColNames>title</ColNames>
       <UnderlyingIndexName>itemname</UnderlyingIndexName>
     </key>
-    <column id="243" parent="232" name="id">
+    <column id="248" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="232" name="username">
+    <column id="249" parent="233" name="username">
       <Position>2</Position>
       <DataType>varchar(11)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="232" name="password">
+    <column id="250" parent="233" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="232" name="role">
+    <column id="251" parent="233" name="role">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="247" parent="232" name="username">
+    <index id="252" parent="233" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="248" parent="232" name="PRIMARY">
+    <key id="253" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="249" parent="232" name="username">
+    <key id="254" parent="233" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>

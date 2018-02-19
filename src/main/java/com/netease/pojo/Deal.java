@@ -1,6 +1,8 @@
 package com.netease.pojo;
 
 public class Deal {
+     private int id;
+
      private User user;
 
      private Item item;
@@ -8,6 +10,14 @@ public class Deal {
      private int price;
 
      private long time;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public User getUser() {
         return user;

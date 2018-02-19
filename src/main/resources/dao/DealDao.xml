@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.netease.mapper.DealDao">
+    <resultMap type="Deal" id="dealList">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="price" column="price" />
+        <result property="time" column="time" />
+    </resultMap>
+
+    <select id="getDealByProductId" resultMap="dealList">
+        SELECT * FROM deal
+        WHERE item_id = #{id};
+    </select>
+
+    <insert id="addDeal" parameterType="Deal" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO deal(item_id, user_id, price, time)
+        VALUES (#{itemId}, #{UserId}, #{price}, #{time});
+    </insert>
+
+    <delete id="deleteDeal" parameterType="Deal" >
+        DELETE * FROM deal
+        WHERE item_id = #{itemId} AND user_id = #{userId};
+    </delete>
+</mapper>

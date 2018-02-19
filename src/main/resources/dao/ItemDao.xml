@@ -9,6 +9,7 @@
         <result property="description" column="description" />
         <result property="image" column="image" />
         <result property="price" column="price" />
+        <association property="deal" column="id" select="com.netease.mapper.DealDao.getDealByProductId"/>
     </resultMap>
 
     <select id="getItemById" resultMap="item">
@@ -19,4 +20,15 @@
     <select id="getAllItems" resultMap="item">
         SELECT * FROM item;
     </select>
+
+    <select id="getItemsByUser" resultMap="item" parameterType="User">
+        SELECT * FROM item I INNER JOIN deal D ON I.id = D.item_id AND D.user_id = #{userId};
+    </select>
+
+    <select id="getItemWithoutUser" resultMap="item" parameterType="User">
+        SELECT * FROM item WHERE id NOT IN
+       (SELECT item_id FROM deal WHERE user_id = #{userId});
+    </select>
+
+
 </mapper>
