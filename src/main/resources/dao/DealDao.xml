@@ -21,7 +21,7 @@
     </insert>
 
     <delete id="deleteDeal" parameterType="Deal" >
-        DELETE * FROM deal
+        DELETE FROM deal
         WHERE item_id = #{itemId} AND user_id = #{userId};
     </delete>
 </mapper>

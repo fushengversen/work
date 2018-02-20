@@ -16,7 +16,7 @@ public interface ItemDao {
 
     List<Item> getItemsByUser(User user);
 
-    List<Item> getItemWithoutUser(User user);
+    List<Item> getItemsWithoutUser(User user);
     
     List<Item> getAllItems();
 }

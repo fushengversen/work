@@ -7,10 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1fb295a-4a1f-4474-a8f5-f347ba61a9bf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad67fe7e-5156-461a-ae07-8f32ca40dd15.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ad67fe7e-5156-461a-ae07-8f32ca40dd15.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/pojo/Deal.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/pojo/Deal.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/controller/Index.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/controller/IndexController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dao/DealDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/dao/DealDao.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dao/ItemDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/dao/ItemDao.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,37 +55,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Deal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/pojo/Deal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#334#335#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DealDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/mapper/DealDao.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,26 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DealDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/dao/DealDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding>
-                <marker date="1519039460000" expanded="true" signature="530:557" ph="SELECT * FRO... item" />
-                <marker date="1519039460000" expanded="true" signature="530:578" ph="SELECT * FRO... deal" />
-                <marker date="1519039460000" expanded="true" signature="691:795" ph="INSERT INTO deal... " />
-                <marker date="1519039460000" expanded="true" signature="871:947" ph="DELETE * FRO... deal" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ItemDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="150">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,18 +77,104 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemDao.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ItemService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemDao.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/dao/ItemDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
-                <marker date="1519041441000" expanded="true" signature="686:729" ph="SELECT * FRO... item" />
-                <marker date="1519041441000" expanded="true" signature="801:819" ph="SELECT * FRO... item" />
-                <marker date="1519041441000" expanded="true" signature="915:999" ph="SELECT * FRO... item" />
-                <marker date="1519041441000" expanded="true" signature="1099:1193" ph="SELECT * FRO... item" />
-                <marker date="1519041441000" expanded="true" signature="1142:1192" ph="SELECT item_... deal" />
+                <marker date="1519128525000" expanded="true" signature="686:729" ph="SELECT * FRO... item" />
+                <marker date="1519128525000" expanded="true" signature="801:819" ph="SELECT * FRO... item" />
+                <marker date="1519128525000" expanded="true" signature="915:999" ph="SELECT * FRO... item" />
+                <marker date="1519128525000" expanded="true" signature="1100:1194" ph="SELECT * FRO... item" />
+                <marker date="1519128525000" expanded="true" signature="1143:1193" ph="SELECT item_... deal" />
+                <marker date="1519128525000" expanded="true" signature="1307:1423" ph="INSERT INTO item... " />
+                <marker date="1519128525000" expanded="true" signature="1478:1605" ph="UPDATE item... " />
+                <marker date="1519128525000" expanded="true" signature="1684:1717" ph="DELETE FROM item... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+              <folding>
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
+                <element signature="e#1684#1685#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DealServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/DealServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="作业计划安排" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/作业计划安排">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,8 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/account.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/public.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/show.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext-service.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/SqlMapConfig.xml" />
@@ -220,18 +261,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/netease/util/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/util/Permission.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/pojo/Item.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/service/DealService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/pojo/Deal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/service/impl/DealServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netease/mapper/DealDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/DealDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/dao/ItemDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netease/controller/AccountController.java" />
       </list>
     </option>
   </component>
@@ -460,18 +503,14 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="work" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -779,12 +818,13 @@
       <workItem from="1518171472742" duration="13385000" />
       <workItem from="1518255237515" duration="11377000" />
       <workItem from="1518871384070" duration="3311000" />
-      <workItem from="1519037786948" duration="3069000" />
+      <workItem from="1519037786948" duration="3209000" />
+      <workItem from="1519127672577" duration="2560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54365000" />
+    <option name="totallyTimeSpent" value="57065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -805,7 +845,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27110156" sideWeight="0.49369368" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746781" sideWeight="0.49369368" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5063063" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -838,13 +878,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/classes/spring/applicationContext-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-service.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -917,13 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/作业计划安排">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.2.RELEASE/spring-webmvc-5.0.2.RELEASE-sources.jar!/org/springframework/web/servlet/view/freemarker/FreeMarkerConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -992,17 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#409#410#0" expanded="false" />
-            <element signature="e#436#437#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1031,9 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,12 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#125#126#0" expanded="false" />
-            <element signature="e#157#158#0" expanded="false" />
-            <element signature="e#184#185#0" expanded="false" />
-            <element signature="e#211#212#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,38 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/pojo/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="30" />
-          <folding>
-            <element signature="e#198#199#0" expanded="false" />
-            <element signature="e#223#224#0" expanded="false" />
-            <element signature="e#256#257#0" expanded="false" />
-            <element signature="e#284#285#0" expanded="false" />
-            <element signature="e#316#317#0" expanded="false" />
-            <element signature="e#344#345#0" expanded="false" />
-            <element signature="e#386#387#0" expanded="false" />
-            <element signature="e#420#421#0" expanded="false" />
-            <element signature="e#458#459#0" expanded="false" />
-            <element signature="e#492#493#0" expanded="false" />
-            <element signature="e#546#547#0" expanded="false" />
-            <element signature="e#592#593#0" expanded="false" />
-            <element signature="e#621#622#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#722#723#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#782#783#0" expanded="false" />
-            <element signature="e#824#825#0" expanded="false" />
-            <element signature="e#858#859#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,40 +1129,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/DealServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#370#371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/pojo/Deal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="e#192#193#0" expanded="true" />
             <element signature="e#217#218#0" expanded="true" />
@@ -1214,14 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/mapper/DealDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1232,37 +1168,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/dao/DealDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="390">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding>
-            <marker date="1519039460000" expanded="true" signature="530:557" ph="SELECT * FRO... item" />
-            <marker date="1519039460000" expanded="true" signature="530:578" ph="SELECT * FRO... deal" />
-            <marker date="1519039460000" expanded="true" signature="691:795" ph="INSERT INTO deal... " />
-            <marker date="1519039460000" expanded="true" signature="871:947" ph="DELETE * FRO... deal" />
+            <marker date="1519128525000" expanded="true" signature="530:557" ph="SELECT * FRO... item" />
+            <marker date="1519128525000" expanded="true" signature="530:578" ph="SELECT * FRO... deal" />
+            <marker date="1519128525000" expanded="true" signature="691:795" ph="INSERT INTO deal... " />
+            <marker date="1519128525000" expanded="true" signature="871:945" ph="DELETE * FRO... deal" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/ItemService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="300">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/作业计划安排">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/dao/ItemDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <marker date="1519041441000" expanded="true" signature="686:729" ph="SELECT * FRO... item" />
-            <marker date="1519041441000" expanded="true" signature="801:819" ph="SELECT * FRO... item" />
-            <marker date="1519041441000" expanded="true" signature="915:999" ph="SELECT * FRO... item" />
-            <marker date="1519041441000" expanded="true" signature="1099:1193" ph="SELECT * FRO... item" />
-            <marker date="1519041441000" expanded="true" signature="1142:1192" ph="SELECT item_... deal" />
+            <marker date="1519128525000" expanded="true" signature="686:729" ph="SELECT * FRO... item" />
+            <marker date="1519128525000" expanded="true" signature="801:819" ph="SELECT * FRO... item" />
+            <marker date="1519128525000" expanded="true" signature="915:999" ph="SELECT * FRO... item" />
+            <marker date="1519128525000" expanded="true" signature="1100:1194" ph="SELECT * FRO... item" />
+            <marker date="1519128525000" expanded="true" signature="1143:1193" ph="SELECT item_... deal" />
+            <marker date="1519128525000" expanded="true" signature="1307:1423" ph="INSERT INTO item... " />
+            <marker date="1519128525000" expanded="true" signature="1478:1605" ph="UPDATE item... " />
+            <marker date="1519128525000" expanded="true" signature="1684:1717" ph="DELETE FROM item... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/mapper/ItemDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/pojo/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding>
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/service/impl/DealServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

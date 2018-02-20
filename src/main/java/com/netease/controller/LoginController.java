@@ -1,8 +1,10 @@
 package com.netease.controller;
 
 import com.netease.pojo.User;
+import com.netease.util.Permission;
 import com.netease.util.Response;
 import com.netease.service.UserService;
+import com.netease.util.Role;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,9 +32,11 @@ public class LoginController {
 
     }
 
+    @Permission(permission = {Role.BUYER, Role.SELLER})
     @RequestMapping("/logout")
     public String logout(HttpSession session){
         session.invalidate();
         return "index";
     }
+
 }

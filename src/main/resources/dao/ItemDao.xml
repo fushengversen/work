@@ -25,10 +25,22 @@
         SELECT * FROM item I INNER JOIN deal D ON I.id = D.item_id AND D.user_id = #{userId};
     </select>
 
-    <select id="getItemWithoutUser" resultMap="item" parameterType="User">
+    <select id="getItemsWithoutUser" resultMap="item" parameterType="User">
         SELECT * FROM item WHERE id NOT IN
        (SELECT item_id FROM deal WHERE user_id = #{userId});
     </select>
 
+    <insert id="addItem" useGeneratedKeys="true" keyProperty="id" parameterType="Item">
+        INSERT INTO item(title, price, image_url, description)
+        VALUES (#{title}, #{price}, #{image}, #{description});
+    </insert>
 
+    <update id="updateItem" >
+        UPDATE item SET title = #{title}, price = #{price}, image_url = #{image}, description = #{description}
+        WHERE id = #{id};
+    </update>
+
+    <delete id="deleteItemById" parameterType="item">
+        DELETE FROM item WHERE id = #{id};
+    </delete>
 </mapper>
