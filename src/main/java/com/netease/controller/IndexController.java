@@ -24,6 +24,7 @@ public class IndexController {
         ModelAndView modelAndView = new ModelAndView();
         List<Item> itemList = itemService.getAllItems();
         modelAndView.addObject("itemList", itemList);
+        modelAndView.setViewName("index");
         return modelAndView;
     }
 
