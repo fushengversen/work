@@ -2,24 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>java</title>
+    <title>编辑成功</title>
     <link rel="stylesheet" href="/css/style.css"/>
 </head>
 <body>
 <#include "include/header.ftl">
-<#assign productId = RequestParameters['id']>
 <div class="g-doc">
-    <#if product??>
     <div class="n-result">
         <h3>编辑成功！</h3>
-        <p><a href="/show?id=${product.id}">[查看内容]</a><a href="/">[返回首页]</a></p>
+        <p><a href="/system/show?id=${id}">[查看内容]</a><a href="/system">[返回首页]</a></p>
     </div>
-    <#else>
-    <div class="n-result">
-        <h3>编辑失败！数据有误或字段过长</h3>
-        <p><a href="/edit?id=${productId}">[重新编辑]</a><a href="/">[返回首页]</a></p>
-    </div>
-    </#if>
 </div>
 <#include "include/footer.ftl">
 </body>

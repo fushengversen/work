@@ -10,7 +10,7 @@ public interface ItemService {
 
     boolean addItem(Item item);
 
-    boolean updateItem(Item item);
+    boolean updateItem(int id, Item item);
 
     boolean deleteItem(int id);
 

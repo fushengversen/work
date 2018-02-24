@@ -2,6 +2,7 @@ com/netease/pojo/UserExample$GeneratedCriteria.class
 com/netease/pojo/UserExample$Criterion.class
 com/netease/pojo/UserExample$Criteria.class
 com/netease/pojo/UserWithBLOBs.class
+com/netease/util/Format.class
 com/netease/pojo/User.class
 com/netease/GeneratorSqlmap.class
 com/netease/mapper/ItemDao.class

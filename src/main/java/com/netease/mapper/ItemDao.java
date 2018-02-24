@@ -2,6 +2,7 @@ package com.netease.mapper;
 
 import com.netease.pojo.Item;
 import com.netease.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface ItemDao {
 
     void addItem(Item item);
 
-    int updateItem(Item item);
+    int updateItem(@Param("id") int id, @Param("item") Item item);
 
     int deleteItemById(int id);
 

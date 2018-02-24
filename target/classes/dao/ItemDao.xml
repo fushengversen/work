@@ -34,8 +34,11 @@
         VALUES (#{title}, #{price}, #{image}, #{description});
     </insert>
 
-    <update id="updateItem" >
-        UPDATE item SET title = #{title}, price = #{price}, image = #{image}, description = #{description}
+    <update id="updateItem" parameterType="com.netease.pojo.Item">
+        UPDATE item
+        SET title = #{item.title}, price = #{item.price},
+            image = #{item.image}, description = #{item.description},
+            detail = #{item.detail}
         WHERE id = #{id};
     </update>
 

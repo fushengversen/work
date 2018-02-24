@@ -25,8 +25,8 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public boolean updateItem(Item item) {
-        int result = itemDao.updateItem(item);
+    public boolean updateItem(int id, Item item) {
+        int result = itemDao.updateItem(id, item);
         return result != 0;
     }
 
