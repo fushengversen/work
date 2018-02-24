@@ -8,6 +8,7 @@ import com.netease.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -16,27 +17,26 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-//@RequestMapping("/system")
-public class LoginController {
+public class SystemController {
     @Resource
     private UserService userService;
 
     @Resource
     private ItemService itemService;
-//    private boolean hasLogined(HttpSession session) {
-//        User user = (User) session.getAttribute("user");
-//        return user != null;
-//    }
-//
-//    private boolean isBuyer(HttpSession session) {
-//        User user = (User) session.getAttribute("user");
-//        return user != null && user.getRole() == 1;
-//    }
-//
-//    private boolean isSeller(HttpSession session) {
-//        User user = (User) session.getAttribute("user");
-//        return user != null && user.getRole() == 0;
-//    }
+    private boolean hasLogined(HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        return user != null;
+    }
+
+    private boolean isBuyer(HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        return user != null && user.getRole() == 1;
+    }
+
+    private boolean isSeller(HttpSession session) {
+        User user = (User) session.getAttribute("user");
+        return user != null && user.getRole() == 0;
+    }
 
     @RequestMapping("/system/login")
     public String login(){
@@ -44,8 +44,10 @@ public class LoginController {
     }
 
     @RequestMapping("/system")
-    public String index(ModelMap modelMap) {
+    public String index(@RequestParam(value = "role", required = false, defaultValue = "0")int role, ModelMap modelMap) {
+
         List<Item> allItems = itemService.getAllItems();
+        modelMap.addAttribute("role",role);
         modelMap.addAttribute("allItems", allItems);
         return "index";
     }
@@ -65,17 +67,34 @@ public class LoginController {
         session.invalidate();
         return "redirect:/system";
     }
-//
-//    @RequestMapping("/error")
-//    public String error(){
-//        return "error";
-//    }
-//
-//    @RequestMapping("/publish")
-//    public String publish(HttpSession session) {
-//        if (!isSeller(session)) {
-//            return "error";
-//        }
-//        return "publish";
-//    }
+
+    @RequestMapping("/error")
+    public String error(){
+        return "error";
+    }
+
+    @RequestMapping("/system/publish")
+    public String publish(HttpSession session) {
+        if (!isSeller(session)) {
+            return "error";
+        }
+        return "publish";
+    }
+
+    @RequestMapping("/system/show")
+    public String show(){
+        return "show";
+    }
+
+    @RequestMapping("/system/account")
+    public String account(HttpSession session){
+        if (!isBuyer(session))  return "error";
+        return "account";
+    }
+
+    @RequestMapping("/system/settleAccount")
+    public String settleAccount(HttpSession session){
+        if (!isBuyer(session))  return "error";
+        return "settleAccount";
+    }
 }

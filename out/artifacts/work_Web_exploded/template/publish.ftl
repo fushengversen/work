@@ -5,13 +5,13 @@
     <title>发布</title>
     <link rel="stylesheet" href="/css/style.css"/>
 </head><body>
-<#include "identity.ftl">
+<#include "include/header.ftl">
 <div class="g-doc">
     <div class="m-tab m-tab-fw m-tab-simple f-cb">
         <h2>内容发布</h2>
     </div>
     <div class="n-public">
-        <form class="m-form m-form-ht" id="form" method="post" action="/sales/publishSubmit" onsubmit="return false;" autocomplete="off">
+        <form class="m-form m-form-ht" id="form" method="post" action="/system/publishSubmit" onsubmit="return false;" autocomplete="off">
             <div class="fmitem">
                 <label class="fmlab">标题：</label>
                 <div class="fmipt">
@@ -28,7 +28,6 @@
                 <label class="fmlab">图片：</label>
                 <div class="fmipt" id="uploadType">
                     <input name="pic" type="radio" value="url" checked /> 图片地址
-                    <input name="pic" type="radio" value="file" /> 本地上传
                 </div>
             </div>
             <div class="fmitem">

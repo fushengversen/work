@@ -20,20 +20,12 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public boolean addItem(Item item) {
-        if(null == item.getTitle() || item.getTitle().length() < 2 || item.getTitle().length() > 80)   return false;
-        if(null == item.getDescription() || item.getDescription().length() < 2 || item.getDescription().length() > 140){
-            return false;
-        }
         itemDao.addItem(item);
         return item.getId() != 0;
     }
 
     @Override
     public boolean updateItem(Item item) {
-        if(null == item.getTitle() || item.getTitle().length() < 2 || item.getTitle().length() > 80)   return false;
-        if(null == item.getDescription() || item.getDescription().length() < 2 || item.getDescription().length() > 140){
-            return false;
-        }
         int result = itemDao.updateItem(item);
         return result != 0;
     }

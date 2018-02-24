@@ -10,6 +10,6 @@
     <p> ${user.password}</p>
     <#else>
     <p>Bad ${user.userName}</p>
-    </#if>
+    </#if
     </body>
 </html>

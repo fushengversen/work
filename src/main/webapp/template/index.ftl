@@ -5,22 +5,22 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" charset="UTF-8"/>
+    <link rel="stylesheet" role="text/css" href="/css/style.css" charset="UTF-8"/>
 
 </head>
 <body>
-<#include "identity.ftl">
+<#include "include/header.ftl">
 <div class="g-doc">
     <div class="m-tab m-tab-fw m-tab-simple f-cb">
         <div class="tab">
             <ul>
             <#if user?? && user.role=1>
-                <#if notBuyFlag=1>
+                <#if role=1>
                     <li><a href="/system">所有内容</a></li>
-                    <li class="z-sel"><a href="/system?type=1">未购买的内容</a></li>
+                    <li class="z-sel"><a href="/system?role=1">未购买的内容</a></li>
                 <#else>
                     <li class="z-sel"><a href="/system">所有内容</a></li>
-                    <li><a href="/system?type=1">未购买的内容</a></li>
+                    <li><a href="/system?role=1">未购买的内容</a></li>
                 </#if>
             <#else>
                 <li class="z-sel"><a href="/system">所有内容</a></li>
@@ -51,7 +51,7 @@
                                 <span class="had"><b>已售出${item.sold}件</b></span>
                             </#if>
                         </li>
-                    <#elseif notBuyFlag=0>
+                    <#elseif role=0>
                         <li id="p-${item.id}">
                             <a href="/system/show?id=#{item.id}" class="link">
                                 <div class="img"><img src="${item.image}"
@@ -99,6 +99,6 @@
 </div>
 <#include "include/footer.ftl">
 </body>
-<script type="text/javascript" src="/js/global.js"></script>
-<script type="text/javascript" src="/js/pageIndex.js"></script>
+<script role="text/javascript" src="/js/global.js"></script>
+<script role="text/javascript" src="/js/pageIndex.js"></script>
 </html>

@@ -4,6 +4,7 @@ public class Item {
     private int id;
     private String title;
     private String description;
+    private String detail;
     private int price;
     private String image;
 
@@ -45,5 +46,13 @@ public class Item {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 }
