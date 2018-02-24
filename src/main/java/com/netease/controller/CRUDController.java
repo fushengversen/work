@@ -48,7 +48,6 @@ public class CRUDController {
         item.setDescription(decode.get("description"));
         item.setDetail(decode.get("detail"));
         item.setPrice(100 * Integer.valueOf(decode.get("price")));
-        item.setImage(decode.get("image"));
         itemService.updateItem(id, item);
         modelMap.addAttribute("id", id);
         return "editSubmit";

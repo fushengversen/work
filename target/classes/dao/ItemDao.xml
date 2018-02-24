@@ -37,8 +37,7 @@
     <update id="updateItem" parameterType="com.netease.pojo.Item">
         UPDATE item
         SET title = #{item.title}, price = #{item.price},
-            image = #{item.image}, description = #{item.description},
-            detail = #{item.detail}
+            description = #{item.description},detail = #{item.detail}
         WHERE id = #{id};
     </update>
 
