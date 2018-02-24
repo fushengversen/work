@@ -2,9 +2,9 @@ package com.netease.service;
 
 import com.netease.pojo.Item;
 import com.netease.pojo.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 public interface ItemService {
     Item getItemById(int id);
 

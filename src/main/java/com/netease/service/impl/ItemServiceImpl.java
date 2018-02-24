@@ -4,10 +4,11 @@ import com.netease.mapper.ItemDao;
 import com.netease.pojo.Item;
 import com.netease.pojo.User;
 import com.netease.service.ItemService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
+@Service
 public class ItemServiceImpl implements ItemService {
 
     @Resource
