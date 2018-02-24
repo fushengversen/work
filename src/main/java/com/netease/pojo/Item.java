@@ -7,6 +7,8 @@ public class Item {
     private String detail;
     private int price;
     private String image;
+    private int num;
+    private int sold;
 
     public int getId() {
         return id;
@@ -54,5 +56,21 @@ public class Item {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public int getSold() {
+        return sold;
+    }
+
+    public void setSold(int sold) {
+        this.sold = sold;
     }
 }

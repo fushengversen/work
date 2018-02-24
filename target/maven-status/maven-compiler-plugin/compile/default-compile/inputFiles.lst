@@ -1,6 +1,8 @@
 /Users/versen/work/src/main/java/com/netease/pojo/UserExample.java
 /Users/versen/work/src/main/java/com/netease/pojo/User.java
+/Users/versen/work/src/main/java/com/netease/controller/CRUDController.java
 /Users/versen/work/src/main/java/com/netease/mapper/ItemDao.java
+/Users/versen/work/src/main/java/com/netease/util/Identity.java
 /Users/versen/work/src/main/java/com/netease/GeneratorSqlmap.java
 /Users/versen/work/src/main/java/com/netease/service/impl/ItemServiceImpl.java
 /Users/versen/work/src/main/java/com/netease/service/impl/UserServiceImpl.java

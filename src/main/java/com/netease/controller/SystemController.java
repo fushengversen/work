@@ -3,6 +3,7 @@ package com.netease.controller;
 import com.netease.pojo.Item;
 import com.netease.pojo.User;
 import com.netease.service.ItemService;
+import com.netease.util.Identity;
 import com.netease.util.Response;
 import com.netease.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -23,20 +24,8 @@ public class SystemController {
 
     @Resource
     private ItemService itemService;
-    private boolean hasLogined(HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        return user != null;
-    }
 
-    private boolean isBuyer(HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        return user != null && user.getRole() == 1;
-    }
 
-    private boolean isSeller(HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        return user != null && user.getRole() == 0;
-    }
 
     @RequestMapping("/system/login")
     public String login(){
@@ -75,26 +64,28 @@ public class SystemController {
 
     @RequestMapping("/system/publish")
     public String publish(HttpSession session) {
-        if (!isSeller(session)) {
+        if (!Identity.isSeller(session)) {
             return "error";
         }
         return "publish";
     }
 
     @RequestMapping("/system/show")
-    public String show(){
+    public String show(@RequestParam(value = "id") Integer id, ModelMap modelMap){
+        Item item = itemService.getItemById(id);
+        modelMap.addAttribute("item", item);
         return "show";
     }
 
     @RequestMapping("/system/account")
     public String account(HttpSession session){
-        if (!isBuyer(session))  return "error";
+        if (!Identity.isBuyer(session))  return "error";
         return "account";
     }
 
     @RequestMapping("/system/settleAccount")
     public String settleAccount(HttpSession session){
-        if (!isBuyer(session))  return "error";
+        if (!Identity.isBuyer(session))  return "error";
         return "settleAccount";
     }
 }

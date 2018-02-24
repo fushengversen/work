@@ -9,7 +9,7 @@ public class WelcomeController {
 
     @RequestMapping("/")
     public String showIndex(){
-        return "welcome";
+        return "redirect:/system";
     }
 
 

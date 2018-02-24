@@ -6,6 +6,8 @@ com/netease/pojo/User.class
 com/netease/GeneratorSqlmap.class
 com/netease/mapper/ItemDao.class
 com/netease/service/impl/UserServiceImpl.class
+com/netease/util/Identity.class
+com/netease/controller/CRUDController.class
 com/netease/controller/WelcomeController.class
 com/netease/mapper/UserMapper.class
 com/netease/pojo/Item.class

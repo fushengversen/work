@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-<#include "include/head.ftl">
+<head>
+    <meta charset="utf-8"/>
+    <title>java</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
 <body>
-<#include "include/support.ftl">
 <#include "include/header.ftl">
 <#assign productId = RequestParameters['id']>
 <div class="g-doc">

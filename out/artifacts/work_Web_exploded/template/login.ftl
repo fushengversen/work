@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-<#include "include/head.ftl">
+<head>
+    <meta charset="utf-8"/>
+    <title>java</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
 <body>
-<#include "include/support.ftl">
 <#include "include/header.ftl">
 <form class="m-form m-form-ht n-login" id="loginForm" onsubmit="return false;" autocomplete="off">
     <div class="fmitem">
