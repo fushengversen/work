@@ -99,6 +99,6 @@
 </div>
 <#include "include/footer.ftl">
 </body>
-<script role="text/javascript" src="/js/global.js"></script>
-<script role="text/javascript" src="/js/pageIndex.js"></script>
+<script type="text/javascript" src="/js/global.js"></script>
+<script type="text/javascript" src="/js/pageIndex.js"></script>
 </html>
