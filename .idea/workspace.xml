@@ -7,20 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1fb295a-4a1f-4474-a8f5-f347ba61a9bf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/WEB-INF/classes/com/netease/controller/CRUDController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/WEB-INF/classes/com/netease/controller/WelcomeController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/js/publish.js" afterPath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/js/publish.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/template/edit.ftl" afterPath="$PROJECT_DIR$/out/artifacts/work_Web_exploded/template/edit.ftl" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/netease/controller/SubmitController.java" afterPath="$PROJECT_DIR$/src/main/java/com/netease/controller/SubmitController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/publish.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/publish.js" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/edit.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/template/edit.ftl" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netease/controller/CRUDController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netease/controller/WelcomeController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/work-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/work-1.0-SNAPSHOT.jar" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,8 +58,8 @@
       <file leaf-file-name="SubmitController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/SubmitController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="48" column="67" lean-forward="false" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+            <state relative-caret-position="421">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -777,12 +764,12 @@
       <workItem from="1519296779647" duration="2068000" />
       <workItem from="1519386499380" duration="3840000" />
       <workItem from="1519442063164" duration="19984000" />
-      <workItem from="1519533096676" duration="11679000" />
+      <workItem from="1519533096676" duration="11950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94692000" />
+    <option name="totallyTimeSpent" value="94963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1233,8 +1220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netease/controller/SubmitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="48" column="67" lean-forward="false" selection-start-line="48" selection-start-column="67" selection-end-line="48" selection-end-column="67" />
+        <state relative-caret-position="421">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
           <folding />
         </state>
       </provider>
