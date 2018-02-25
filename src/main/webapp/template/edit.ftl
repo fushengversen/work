@@ -23,19 +23,20 @@
             <div class="fmitem">
                 <label class="fmlab">摘要：</label>
                 <div class="fmipt">
-                    <input class="u-ipt ipt" name="description" value="${item.description}" placeholder="2-140字符"／>
+                    <input class="u-ipt ipt" name="summary" value="${item.description}" placeholder="2-140字符"／>
                 </div>
             </div>
             <div class="fmitem">
                 <label class="fmlab">图片：</label>
                 <div class="fmipt" id="uploadType">
                     <input name="image" type="radio" value="url" checked /> 图片地址
+                    <input name="image" type="radio" value="file" /> 本地上传
                 </div>
             </div>
             <div class="fmitem">
                 <label class="fmlab"></label>
                 <div class="fmipt" id="urlUpload">
-                    <textarea class="u-ipt ipt"  name="image" rows="2" placeholder="图片地址">${item.image}</textarea>
+                    <input class="u-ipt ipt"  name="image" value="${item.image}" placeholder="图片地址"/>
                 </div>
                 <div class="fmipt" id="fileUpload"  style="display:none">
                     <input class="u-ipt ipt" name="file" type="file" id="fileUp"/>

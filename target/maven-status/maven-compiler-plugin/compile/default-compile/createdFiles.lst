@@ -2,14 +2,14 @@ com/netease/pojo/UserExample$GeneratedCriteria.class
 com/netease/pojo/UserExample$Criterion.class
 com/netease/pojo/UserExample$Criteria.class
 com/netease/pojo/UserWithBLOBs.class
+com/netease/controller/HelperController.class
 com/netease/util/Format.class
 com/netease/pojo/User.class
 com/netease/GeneratorSqlmap.class
 com/netease/mapper/ItemDao.class
 com/netease/service/impl/UserServiceImpl.class
 com/netease/util/Identity.class
-com/netease/controller/CRUDController.class
-com/netease/controller/WelcomeController.class
+com/netease/controller/SubmitController.class
 com/netease/mapper/UserMapper.class
 com/netease/pojo/Item.class
 com/netease/pojo/UserExample.class

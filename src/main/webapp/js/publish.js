@@ -49,12 +49,6 @@
                 var maxAllowedSize = 1000000;
                 var file = uploadInput.files[0];
 
-                var sub = file.name.substring(file.name.lastIndexOf('.') + 1);
-                if (sub != 'jpg' && sub != 'png' && sub != 'bmp') {
-                    alert('请上传jpg、png、bmp结尾的图片');
-                    return;
-                }
-
                 if (uploadInput.files[0].size > maxAllowedSize) {
                     alert("超过文件上传大小限制");
                 } else {
@@ -89,12 +83,10 @@
                     price.value = Number(price.value);
                     var imgURL = image.value;
                     var sub = imgURL.substring(imgURL.lastIndexOf('.')+1);
-                    if (sub != 'jpg' && sub != 'png' && sub != 'bmp') {
-                        alert('请上传jpg、png、bmp结尾的图片');
-                    } else {
-                        isSubmiting = true;
-                        form.submit();
-                    }
+
+                    isSubmiting = true;
+                    form.submit();
+
                 }
             }.bind(this), false);
             [title, description, image, detail, price].forEach(function (item) {
