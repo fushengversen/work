@@ -19,9 +19,9 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public boolean addItem(Item item) {
+    public int addItem(Item item) {
         itemDao.addItem(item);
-        return item.getId() != 0;
+        return item.getId() ;
     }
 
     @Override

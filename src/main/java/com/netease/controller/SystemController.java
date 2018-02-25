@@ -51,6 +51,12 @@ public class SystemController {
 
     }
 
+    @RequestMapping(value = "system/api/upload")
+    @ResponseBody
+    public Map upload(){
+        return Response.build(200, "登陆成功", true);
+    }
+
     @RequestMapping("/system/logout")
     public String logout(HttpSession session){
         session.invalidate();
@@ -62,13 +68,6 @@ public class SystemController {
         return "error";
     }
 
-    @RequestMapping("/system/publish")
-    public String publish(HttpSession session) {
-        if (!Identity.isSeller(session)) {
-            return "error";
-        }
-        return "publish";
-    }
 
     @RequestMapping("/system/show")
     public String show(@RequestParam(value = "id") Integer id, ModelMap modelMap){

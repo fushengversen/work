@@ -4,7 +4,7 @@
 		return;
 	}
 	var title = form['title'];
-	var summary = form['summary'];
+	var summary = form['description'];
 	var image = form['image'];
 	var detail = form['detail'];
 	var price = form['price'];

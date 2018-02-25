@@ -30,14 +30,15 @@
     </select>
 
     <insert id="addItem" useGeneratedKeys="true" keyProperty="id" parameterType="Item">
-        INSERT INTO item(title, price, image, description)
-        VALUES (#{title}, #{price}, #{image}, #{description});
+        INSERT INTO item(title, price, image, description, detail)
+        VALUES (#{title}, #{price}, #{image}, #{description}, #{detail});
     </insert>
 
     <update id="updateItem" parameterType="com.netease.pojo.Item">
         UPDATE item
         SET title = #{item.title}, price = #{item.price},
-            description = #{item.description},detail = #{item.detail}
+            description = #{item.description},detail = #{item.detail},
+            image = #{item.image}
         WHERE id = #{id};
     </update>
 

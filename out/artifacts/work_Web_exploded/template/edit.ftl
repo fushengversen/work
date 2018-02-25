@@ -64,7 +64,8 @@
     </div>
 </div>
 <#include "include/footer.ftl">
+
+</body>
 <script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript" src="/js/publish.js"></script>
-</body>
 </html>

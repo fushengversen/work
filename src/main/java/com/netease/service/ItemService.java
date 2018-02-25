@@ -8,7 +8,7 @@ import java.util.List;
 public interface ItemService {
     Item getItemById(int id);
 
-    boolean addItem(Item item);
+    int addItem(Item item);
 
     boolean updateItem(int id, Item item);
 

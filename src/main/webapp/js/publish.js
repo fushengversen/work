@@ -5,7 +5,7 @@
         return;
     }
     var title = form['title'];
-    var description = form['description'];
+    var description = form['summary'];
     var image = form['image'];
     var detail = form['detail'];
     var price = form['price'];
@@ -38,57 +38,63 @@
                 }
             };
 
-            // $('upload').addEventListener('click', function () {
-            //
-            //     uploadInput.addEventListener('change', function () {
-            //         console.log(uploadInput.files) // File listing!
-            //     });
-            //     for (var i = 0, fileCount = uploadInput.files.length; i < fileCount; i++) {
-            //         console.log(uploadInput.files[i]);
-            //     }
-            //     var maxAllowedSize = 1000000;
-            //     var file = uploadInput.files[0];
-            //
-            //     var sub = file.name.substring(file.name.lastIndexOf('.') + 1);
-            //
-            //     if (uploadInput.files[0].size > maxAllowedSize) {
-            //         alert("超过文件上传大小限制");
-            //     } else {
-            //         var formData = new FormData();
-            //         formData.append('file', file, file.name);
-            //         formData.enctype = "multipart/form-data";
-            //
-            //         var xhr = new XMLHttpRequest();
-            //         xhr.open("post", "/system/api/upload", true);
-            //         xhr.onload = function () {
-            //             if (xhr.status === 200) {
-            //                 var o = JSON.parse(xhr.responseText);
-            //                 if (o.code === 200) {
-            //                     $('urlUpload').style.display = 'block';
-            //                     $('fileUpload').style.display = 'none';
-            //                     imageUrl = o && o.data;
-            //                     image.value = imageUrl;
-            //                     imgpre.src = imageUrl;
-            //                     alert("文件上传成功");
-            //                 } else {
-            //                     alert('文件上传失败');
-            //                 }
-            //             } else {
-            //                 alert('文件上传失败');
-            //             }
-            //         };
-            //         xhr.send(formData);
-            //     }
-            // });
+            $('upload').addEventListener('click', function () {
+
+                uploadInput.addEventListener('change', function () {
+                    console.log(uploadInput.files) // File listing!
+                });
+                for (var i = 0, fileCount = uploadInput.files.length; i < fileCount; i++) {
+                    console.log(uploadInput.files[i]);
+                }
+                var maxAllowedSize = 1000000;
+                var file = uploadInput.files[0];
+
+                var sub = file.name.substring(file.name.lastIndexOf('.') + 1);
+                if (sub != 'jpg' && sub != 'png' && sub != 'bmp') {
+                    alert('请上传jpg、png、bmp结尾的图片');
+                    return;
+                }
+
+                if (uploadInput.files[0].size > maxAllowedSize) {
+                    alert("超过文件上传大小限制");
+                } else {
+                    var formData = new FormData();
+                    formData.append('file', file, file.name);
+                    formData.enctype = "multipart/form-data";
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("post", "/system/api/upload", true);
+                    xhr.onload = function () {
+                        if (xhr.status === 200) {
+                            var o = JSON.parse(xhr.responseText);
+                            if (o.code === 200) {
+                                $('urlUpload').style.display = 'block';
+                                $('fileUpload').style.display = 'none';
+                                imageUrl = o && o.data;
+                                image.value = imageUrl;
+                                imgpre.src = imageUrl;
+                                alert("文件上传成功");
+                            } else {
+                                alert('文件上传失败');
+                            }
+                        } else {
+                            alert('文件上传失败');
+                        }
+                    };
+                    xhr.send(formData);
+                }
+            });
             publish.addEventListener('click', function (e) {
                 if (!isSubmiting && this.check()) {
                     price.value = Number(price.value);
                     var imgURL = image.value;
                     var sub = imgURL.substring(imgURL.lastIndexOf('.')+1);
-
-                    isSubmiting = true;
-                    form.submit();
-
+                    if (sub != 'jpg' && sub != 'png' && sub != 'bmp') {
+                        alert('请上传jpg、png、bmp结尾的图片');
+                    } else {
+                        isSubmiting = true;
+                        form.submit();
+                    }
                 }
             }.bind(this), false);
             [title, description, image, detail, price].forEach(function (item) {
@@ -98,7 +104,7 @@
             }.bind(this));
             image.addEventListener('input', function (e) {
                 var value = image.value.trim();
-                if (value !== '') {
+                if (value != '') {
                     imgpre.src = value;
                 }
             }.bind(this), false);
@@ -112,14 +118,14 @@
                 [description, function (value) {
                     return value.length < 2 || value.length > 140
                 }],
-                // [image, function (value) {
-                //     return imageMode === "urlUpload" && value === '';
-                // }],
+                [image, function (value) {
+                    return imageMode == "urlUpload" && value == '';
+                }],
                 [detail, function (value) {
                     return value.length < 2 || value.length > 1000
                 }],
                 [price, function (value) {
-                    return value === '' || !Number(value)
+                    return value == '' || !Number(value)
                 }]
             ].forEach(function (item) {
                 var value = item[0].value.trim();
@@ -129,10 +135,10 @@
                 }
                 item[0].value = value;
             });
-            // if (imageMode === "fileUpload" && !imageUrl) {
-            //     uploadInput.classList.add('z-err');
-            //     result = false;
-            // }
+            if (imageMode == "fileUpload" && !imageUrl) {
+                uploadInput.classList.add('z-err');
+                result = false;
+            }
             return result;
         }
     };

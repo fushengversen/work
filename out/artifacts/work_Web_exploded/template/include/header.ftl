@@ -17,7 +17,7 @@
         <ul class="nav">
             <li><a href="/system">首页</a></li>
             <#if user.role=0>
-                <li><a href="/system/publish">发布</a></li>
+                <li><a href="/system/api/publish">发布</a></li>
             <#else>
                 <li><a href="/system/account">账务</a></li>
                 <li><a href="/system/settleAccount">购物车</a></li>
