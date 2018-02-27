@@ -45,7 +45,7 @@ public class SubmitController {
         }
         Item item = new Item();
         Map<String, String> decode = Format.decodeString2Map(itemForm);
-        
+
         item.setTitle(decode.get("title"));
         item.setDescription(decode.get("summary"));
         item.setDetail(decode.get("detail"));

@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class SystemController {
+public class UserController {
     @Resource
     private UserService userService;
 
@@ -34,7 +34,6 @@ public class SystemController {
 
     @RequestMapping("/system")
     public String index(@RequestParam(value = "role", required = false, defaultValue = "0")int role, ModelMap modelMap) {
-
         List<Item> allItems = itemService.getAllItems();
         modelMap.addAttribute("role",role);
         modelMap.addAttribute("allItems", allItems);
@@ -63,10 +62,6 @@ public class SystemController {
         return "redirect:/system";
     }
 
-    @RequestMapping("/error")
-    public String error(){
-        return "error";
-    }
 
 
     @RequestMapping("/system/show")
@@ -76,15 +71,5 @@ public class SystemController {
         return "show";
     }
 
-    @RequestMapping("/system/account")
-    public String account(HttpSession session){
-        if (!Identity.isBuyer(session))  return "error";
-        return "account";
-    }
 
-    @RequestMapping("/system/settleAccount")
-    public String settleAccount(HttpSession session){
-        if (!Identity.isBuyer(session))  return "error";
-        return "settleAccount";
-    }
 }

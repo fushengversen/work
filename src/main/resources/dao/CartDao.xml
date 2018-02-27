@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.netease.mapper.CartDao" >
+
+    <resultMap type="com.netease.pojo.Cart" id="cart">
+        <id property="id" column="id" />
+        <result property="price" column="price" />
+        <result property="title" column="title" />
+        <result property="num" column="num" />
+    </resultMap>
+
+    <!--<select id="cartsByUserId" resultMap="cart" resultType="Cart">-->
+        <!--SELECT id, user_id, item_id, num-->
+        <!--FROM cart-->
+        <!--WHERE user_id = #{userId}-->
+        <!--ORDER BY id DESC ;-->
+    <!--</select>-->
+
+    <!--<insert id="addCart" useGeneratedKeys="true" keyProperty="id" parameterType="Cart">-->
+        <!--INSERT INTO cart(user_id, item_id, num)-->
+        <!--VALUES (#{userId}, #{itemId}, #{num});-->
+    <!--</insert>-->
+
+    <select id="itemList" resultMap="cart">
+        SELECT c.item_id as id, i.num as num,i.price as price ,i.title as title
+        from cart c
+        left join item i
+        on c.item_id = i.id;
+    </select>
+</mapper>

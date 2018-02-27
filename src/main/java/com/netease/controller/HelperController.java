@@ -21,6 +21,11 @@ public class HelperController {
         return "redirect:/system";
     }
 
+    @RequestMapping("/error")
+    public String error(){
+        return "error";
+    }
+
     @RequestMapping("sales/api/delete")
     @ResponseBody
     public Map delete(@RequestParam("id") int id){

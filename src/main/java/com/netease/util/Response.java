@@ -3,7 +3,7 @@ package com.netease.util;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Response {
+public class Response<T> {
 
     private Integer code;
 
@@ -11,11 +11,7 @@ public class Response {
 
     private Boolean result;
 
-    public Response(Integer code, String message, Boolean result) {
-        this.code = code;
-        this.message = message;
-        this.result = result;
-    }
+    private T data;
 
     public Integer getCode() {
         return code;
@@ -39,6 +35,14 @@ public class Response {
 
     public void setResult(Boolean result) {
         this.result = result;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 
     public static Map<String, Object> build(Integer code, String message, Boolean result){

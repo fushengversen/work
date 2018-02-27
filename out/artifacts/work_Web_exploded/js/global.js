@@ -26,7 +26,34 @@
 				arr.push(name + '=' + value);
 			}
 			return arr.join('&');
-		}
+		},
+        findOne: function (array, id) {
+            return array.filter(function (item) {
+                return item.id == id;
+            })[0];
+        },
+        modifyOne: function (array, id, num) {
+            var item = this.findOne(array, id);
+            item.num = num;
+        },
+        modifyTwo: function (array, id, num) {
+            var item = this.findOne(array, id);
+            item.num = parseInt(item.num) + parseInt(num);
+        },
+        getCookie: function (name) {
+            var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+            result && (result = JSON.parse(decodeURIComponent(result[1])));
+            return result;
+        },
+        setCookie: function (name, value) {
+            var cookie = [name, '=', JSON.stringify(value)].join('');
+            document.cookie = cookie;
+        },
+        deleteCookie: function (name) {
+            if (this.getCookie(name)) {
+                this.setCookie(name, "", -1);
+            }
+        },
 	};
 
     var ajax;
