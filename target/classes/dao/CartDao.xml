@@ -15,14 +15,20 @@
         <!--WHERE user_id = #{userId}-->
         <!--ORDER BY id DESC ;-->
     <!--</select>-->
+    <!--cart 用user_id 和 item_id 建立了联合索引，有则更新，没有则插入 -->
+    <insert id="addCart" useGeneratedKeys="true" keyProperty="id" parameterType="Cart">
+        INSERT INTO cart(user_id, item_id, num)
+        VALUES (#{userId}, #{itemId}, #{num})
+        ON DUPLICATE KEY UPDATE num = num + #{num};
+    </insert>
 
-    <!--<insert id="addCart" useGeneratedKeys="true" keyProperty="id" parameterType="Cart">-->
-        <!--INSERT INTO cart(user_id, item_id, num)-->
-        <!--VALUES (#{userId}, #{itemId}, #{num});-->
-    <!--</insert>-->
+    <update id="updateIfExists" parameterType="Cart">
+        UPDATE cart SET num = #{num} WHERE user_id = #{userId} AND item_id = #{itemId};
+    </update>
+
 
     <select id="itemList" resultMap="cart">
-        SELECT c.item_id as id, i.num as num,i.price as price ,i.title as title
+        SELECT c.item_id as id, c.num as num,i.price as price ,i.title as title
         from cart c
         left join item i
         on c.item_id = i.id;

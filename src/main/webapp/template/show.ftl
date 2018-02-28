@@ -16,7 +16,9 @@
             <div class="price">
                 <span class="v-unit">¥</span><span class="v-value">${(item.price/100)?c}</span>
             </div>
-            <div class="num">购买数量：1</div>
+            <div class="num">购买数量：<span id="plusNum" class="lessNum"><a>-</a></span><span
+                    class="totalNum" id="allNum">1</span><span id="addNum" class="moreNum"><a>+</a></span>
+            </div>
         <#if user??>
             <div class="oprt f-cb">
                 <#if user.role=0>

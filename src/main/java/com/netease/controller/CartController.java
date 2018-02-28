@@ -1,6 +1,7 @@
 package com.netease.controller;
 
 import com.netease.pojo.Cart;
+import com.netease.pojo.User;
 import com.netease.service.CartService;
 import com.netease.service.ItemService;
 import com.netease.util.Identity;
@@ -23,11 +24,20 @@ public class CartController {
     @Resource
     private ItemService itemService;
 
-    @RequestMapping("/addToCart")
+    @RequestMapping("system/api/addToCart")
     @ResponseBody
-    public Map addToCart(@RequestBody Cart cart){
-        cartService.addCart(cart);
-        return Response.build(200, "添加购物车成功", true);
+    public Map addToCart(@RequestBody Cart cart, HttpSession session){
+        System.out.println(cart.getId()+"     "+ cart.getNum()+"      "+cart.getTitle());
+        User user = (User)session.getAttribute("user");
+        if (null == user || user.getRole() != 1){
+            return Response.build(300, "添加失败", false);
+        }
+        Cart newCart = new Cart();
+        newCart.setItemId(cart.getId());
+        newCart.setNum(cart.getNum());
+        newCart.setUserId(user.getId());
+        cartService.addCart(newCart);
+        return Response.build(200, "添加成功", true);
     }
 
     @RequestMapping("/system/settleAccount")
