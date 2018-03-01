@@ -1,10 +1,7 @@
 package com.netease.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.netease.pojo.Cart;
-import com.netease.pojo.Item;
-import com.netease.pojo.User;
+import com.netease.pojo.Account;
+import com.netease.service.AccountService;
 import com.netease.service.CartService;
 import com.netease.service.ItemService;
 import com.netease.util.Identity;
@@ -13,13 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.annotation.Resource;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,9 +24,19 @@ public class AccountController {
     @Resource
     private ItemService itemService;
 
+    @Resource
+    private AccountService accountService;
+
     @RequestMapping("/system/account")
-    public String account(HttpSession session){
+    public String account(HttpSession session, ModelMap modelMap){
         if (!Identity.isBuyer(session))  return "error";
+        List<Account> accounts = accountService.accountList();
+        int totalPrice = 0;
+        for (Account account : accounts){
+            totalPrice += account.getPrice();
+        }
+        modelMap.addAttribute("accounts", accounts);
+        modelMap.addAttribute("totalPrice", totalPrice);
         return "account";
     }
 
@@ -45,4 +47,5 @@ public class AccountController {
         //增加商品卖出和购物车加入逻辑
         return Response.build(200, "购买成功", true);
     }
+
 }

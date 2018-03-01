@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.netease.mapper.AccountDao" >
+
+    <resultMap type="Account" id="account">
+        <result column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="item_id" property="itemId"/>
+        <result column="title" property="title"/>
+        <result column="image" property="image"/>
+        <result column="price" property="price"/>
+        <result column="num" property="num"/>
+        <result column="purchase_time" property="purchaseTime"/>
+    </resultMap>
+
+    <select id="getAccountByUserId" resultMap="account">
+        SELECT * FROM account WHERE user_id = #{userId};
+    </select>
+
+    <select id="accountList" resultMap="account">
+        select a.id as id, a.price as price ,
+            a.purchase_time as purchase_time, a.item_id as item_id,
+            a.num as num,
+            i.title as title, i.image as image
+        from account a
+        left join item i on a.item_id = i.id;
+    </select>
+</mapper>

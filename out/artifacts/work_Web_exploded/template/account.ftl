@@ -33,17 +33,17 @@
         </tr>
         </thead>
 
-        <#if finances??>
+        <#if accounts??>
             <tbody>
-                <#list finances>
-                    <#items as finance>
+                <#list accounts>
+                    <#items as account>
                     <tr>
-                        <td><a href="/system/show?id=${finance.productId}"><img src="${finance.image}" alt=""></a></td>
-                        <td><h4><a href="/system/show?id=${finance.productId}">${finance.title}</a></h4>
+                        <td><a href="/system/show?id=${account.itemId}"><img src="${account.image}" alt=""></a></td>
+                        <td><h4><a href="/system/show?id=${account.itemId}">${account.title}</a></h4>
                         </td>
-                        <td><span class="v-time">${finance.purchaseTime}</span></td>
-                        <td><span class="v-num">${finance.num}</span></td>
-                        <td><span class="v-unit">¥</span><span class="value">${(finance.price/100)?c}</span></td>
+                        <td><span class="v-time">${account.purchaseTime?string("yyyy-MM-dd HH:mm")}</span></td>
+                        <td><span class="v-num">${account.num}</span></td>
+                        <td><span class="v-unit">¥</span><span class="value">${(account.price/100)?c}</span></td>
                     </tr>
                     </#items>
                 </#list>
