@@ -9,6 +9,8 @@
         <result property="description" column="description" />
         <result property="image" column="image" />
         <result property="price" column="price" />
+        <result property="sold" column="sold" />
+
     </resultMap>
 
     <select id="getItemById" resultMap="item">
@@ -45,4 +47,9 @@
     <delete id="deleteItemById" parameterType="item">
         DELETE FROM item WHERE id = #{id};
     </delete>
+
+    <update id="soldItem" parameterType="com.netease.pojo.Sold">
+        UPDATE item SET sold = sold + #{num}
+        WHERE id = #{itemId};
+    </update>
 </mapper>

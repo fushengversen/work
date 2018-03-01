@@ -77,7 +77,7 @@
     var layer = new Layer();
     $('Account').onclick = function(e){
         var newProducts = productList.map(function(arr){
-            return {'id':arr.id,'number':arr.num,'price':arr.price};
+            return {'itemId':arr.id,'num':arr.num,'price':arr.price};
         });
         console.log(newProducts);
         var ele = e.target;
@@ -89,6 +89,7 @@
 
                 var xhr = new XMLHttpRequest();
                 var data = JSON.stringify(newProducts);
+                console.log(data);
                 xhr.onreadystatechange = function(){
                     if(xhr.readyState === 4){
                         var status = xhr.status;

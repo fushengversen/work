@@ -11,6 +11,8 @@ public interface CartService {
 
     int addCart(Cart cart);
 
+    int deleteAll();
+
 //    int addItemsToCart(List<Cart> carts);
 
 }

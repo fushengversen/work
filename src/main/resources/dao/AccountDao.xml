@@ -25,4 +25,12 @@
         from account a
         left join item i on a.item_id = i.id;
     </select>
+
+    <insert id="insertItemsToAccount" useGeneratedKeys="true" parameterType="Account">
+        INSERT INTO account (user_id, item_id, num, price, purchase_time)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.userId}, #{item.itemId}, #{item.num}, #{item.price}, #{item.purchaseTime})
+        </foreach>
+    </insert>
 </mapper>

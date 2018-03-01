@@ -13,6 +13,7 @@ com/netease/mapper/CartDao.class
 com/netease/service/AccountService.class
 com/netease/service/impl/UserServiceImpl.class
 com/netease/util/Identity.class
+com/netease/pojo/Sold.class
 com/netease/controller/AccountController.class
 com/netease/pojo/Account.class
 com/netease/controller/SubmitController.class

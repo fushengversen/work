@@ -1,6 +1,7 @@
 package com.netease.service;
 
 import com.netease.pojo.Item;
+import com.netease.pojo.Sold;
 import com.netease.pojo.User;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,8 @@ public interface ItemService {
     boolean updateItem(int id, Item item);
 
     boolean deleteItem(int id);
+
+    int soldItems(List<Sold> soldList);
 
     List<Item> getAllItems();
 

@@ -9,12 +9,6 @@
         <result property="num" column="num" />
     </resultMap>
 
-    <!--<select id="cartsByUserId" resultMap="cart" resultType="Cart">-->
-        <!--SELECT id, user_id, item_id, num-->
-        <!--FROM cart-->
-        <!--WHERE user_id = #{userId}-->
-        <!--ORDER BY id DESC ;-->
-    <!--</select>-->
     <!--cart 用user_id 和 item_id 建立了联合索引，有则更新，没有则插入 -->
     <insert id="addCart" useGeneratedKeys="true" keyProperty="id" parameterType="Cart">
         INSERT INTO cart(user_id, item_id, num)
@@ -33,4 +27,8 @@
         left join item i
         on c.item_id = i.id;
     </select>
+
+    <delete id="deleteAll" parameterType="Cart">
+        DELETE FROM cart;
+    </delete>
 </mapper>

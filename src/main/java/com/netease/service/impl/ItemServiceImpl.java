@@ -2,6 +2,7 @@ package com.netease.service.impl;
 
 import com.netease.mapper.ItemDao;
 import com.netease.pojo.Item;
+import com.netease.pojo.Sold;
 import com.netease.pojo.User;
 import com.netease.service.ItemService;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,14 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public boolean deleteItem(int id) {
         return itemDao.deleteItemById(id) != 0;
+    }
+
+    @Override
+    public int soldItems(List<Sold> soldList) {
+        for (Sold sold : soldList){
+            itemDao.soldItem(sold);
+        }
+        return soldList.size();
     }
 
     @Override

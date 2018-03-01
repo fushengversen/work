@@ -22,4 +22,9 @@ public class AccountServiceImpl implements AccountService {
     public List<Account> accountList() {
         return accountDao.accountList();
     }
+
+    @Override
+    public int insertItemToAccount(List<Account> accounts) {
+        return accountDao.insertItemsToAccount(accounts);
+    }
 }

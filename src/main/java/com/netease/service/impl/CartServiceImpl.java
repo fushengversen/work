@@ -27,4 +27,9 @@ public class CartServiceImpl implements CartService {
     public int addCart(Cart cart) {
         return cartDao.addCart(cart);
     }
+
+    @Override
+    public int deleteAll() {
+        return cartDao.deleteAll();
+    }
 }

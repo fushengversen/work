@@ -3,6 +3,7 @@ package com.netease.controller;
 import com.netease.pojo.Cart;
 import com.netease.pojo.User;
 import com.netease.service.CartService;
+import com.netease.util.Identity;
 import com.netease.util.Response;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,10 +20,15 @@ public class CartController {
     @Resource
     private CartService cartService;
 
+    @RequestMapping(value = "system/settleAccount")
+    public String cart(HttpSession session){
+        if (!Identity.isBuyer(session)) return "error";
+        return "settleAccount";
+    }
+
     @RequestMapping("system/api/addToCart")
     @ResponseBody
     public Map addToCart(@RequestBody Cart cart, HttpSession session){
-        System.out.println(cart.getId()+"     "+ cart.getNum()+"      "+cart.getTitle());
         User user = (User)session.getAttribute("user");
         if (null == user || user.getRole() != 1){
             return Response.build(300, "添加失败", false);
