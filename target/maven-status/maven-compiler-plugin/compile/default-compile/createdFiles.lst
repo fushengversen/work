@@ -1,4 +1,5 @@
 com/netease/pojo/UserExample$GeneratedCriteria.class
+com/netease/util/FlowControl.class
 com/netease/pojo/UserExample$Criterion.class
 com/netease/pojo/UserExample$Criteria.class
 com/netease/pojo/UserWithBLOBs.class

@@ -23,6 +23,7 @@
 /Users/versen/work/src/main/java/com/netease/service/impl/CartServiceImpl.java
 /Users/versen/work/src/main/java/com/netease/util/Identity.java
 /Users/versen/work/src/main/java/com/netease/GeneratorSqlmap.java
+/Users/versen/work/src/main/java/com/netease/util/FlowControl.java
 /Users/versen/work/src/main/java/com/netease/pojo/Item.java
 /Users/versen/work/src/main/java/com/netease/mapper/UserMapper.java
 /Users/versen/work/src/main/java/com/netease/pojo/UserWithBLOBs.java
