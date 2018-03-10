@@ -40,4 +40,11 @@ public class HelperController {
         modelMap.addAttribute("message", "overload");
         return "overload";
     }
+
+    @RequestMapping("/system/test")
+    public String permit(ModelMap modelMap){
+        modelMap.addAttribute("message", "permitted");
+        return "permit";
+    }
+
 }

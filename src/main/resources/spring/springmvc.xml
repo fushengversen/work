@@ -16,16 +16,16 @@
     
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/system"/>
+            <mvc:mapping path="/system/test"/>
             <ref bean="flowController"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
     <bean id="flowController" class="com.netease.util.FlowControl">
         <constructor-arg index="0" value="5"/>
-        <constructor-arg index="1" value="1"/>
+        <constructor-arg index="1" value="1000"/>
         <constructor-arg index="2" value="20"/>
-        <constructor-arg index="3" value="http://localhost:8080/system/overload"/>
+        <constructor-arg index="3" value="/system/overload"/>
     </bean>
 	<bean id="contentNegotiationManager"
 		  class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">

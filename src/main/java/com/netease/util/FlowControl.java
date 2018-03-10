@@ -5,8 +5,8 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Random;
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class FlowControl extends HandlerInterceptorAdapter {
     private int permits;
@@ -30,36 +30,18 @@ public class FlowControl extends HandlerInterceptorAdapter {
     }
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException, InterruptedException {
 
-
-            if (semaphore.tryAcquire()) {
+            if (semaphore.tryAcquire(timeout, TimeUnit.MILLISECONDS)) {
                 System.out.println("request was permitted");
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    System.out.println("sleep exception");
-                    response.sendRedirect(url);
-                    response.setStatus(503);
-                    return false;
-                }
+                Thread.sleep((int)(Math.random()*1000));
                 semaphore.release();
                 return true;
             } else {
-                System.out.println("overload");
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    System.out.println("sleep exception");
-                    response.sendRedirect(url);
-                    response.setStatus(503);
-                    return false;
-                }
-                response.sendRedirect(url);
-                response.setStatus(503);
+                System.out.println("request was overload");
+                Thread.sleep(100);
+                response.sendRedirect(request.getContextPath()+url);
                 return false;
-
-
             }
 
 
